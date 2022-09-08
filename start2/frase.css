@@ -30,8 +30,10 @@ body {
 .parole i {
     position:absolute;
     opacity:0;
-    animation: Alternato 8s;
-    
+    animation: Alternato;
+    animation-duration:5s;
+    animation-iteration-count: 3;
+    animation-timing-function: linear;  
 }
 
 .parole i:nth-child(1){
@@ -59,13 +61,20 @@ body {
         transform:translateY(-25px);
     }
     5% {
+        opacity:0.5;
+        transform:translateY(0px);
+    }
+    10% {
         opacity:1;
         transform:translateY(0px);
     }
-
     20% {
         opacity:0;
         transform:translateY(25px);
+    }
+    100% {
+        opacity:0;
+        transform:translateY(0px);
     }
 }
 
